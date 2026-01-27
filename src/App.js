@@ -1,4 +1,4 @@
-import { useEffect, useState, useRef } from "react";
+import { useEffect, useState, useRef, useCallback, useMemo } from "react";
 import { motion, useAnimation } from "framer-motion";
 import { Box, CircularProgress } from "@mui/material";
 import Navbar from './components/navbar/Navbar'
@@ -16,6 +16,13 @@ function App({ mode, toggleMode }) {
   const controls = useAnimation();
   const [isLoading, setIsLoading] = useState(true);
 
+const startCurtain = useCallback(() => {
+  controls.start({
+    transform: 'translate3d(0, -120%, 0) skew(-10deg, -10deg)',
+    transition: { duration: 0.6, ease: [0.3, 0, 0.3, 1] }
+  });
+}, [controls]);
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false); // hide loader
@@ -23,14 +30,9 @@ function App({ mode, toggleMode }) {
     }, 500);
 
     return () => clearTimeout(timer);
-  }, []);
+  }, [startCurtain]);
 
-  function startCurtain() {
-    controls.start({
-      transform: 'translate3d(0, -120%, 0) skew(-10deg, -10deg)',
-      transition: { duration: 0.6, ease: [0.3, 0, 0.3, 1] }
-    });
-  }
+
 // Loading Screen and curtain End
 
 // ScrollY Active Section Start
@@ -43,13 +45,13 @@ function App({ mode, toggleMode }) {
   const projectRef = useRef(null);
   const contactRef = useRef(null);
 
-  const navSections = [
-    { id: 'hero',label:'Home', ref: heroRef },
-    { id: 'about',label:'About', ref: aboutRef },
-    { id: 'skill',label:'Skills', ref: skillRef },
-    { id: 'projects', label:'Projects', ref: projectRef },
-    { id: 'contact', label:'Contact' , ref: contactRef },
-  ]
+const navSections = useMemo(() => ([
+  { id: 'hero', label:'Home', ref: heroRef },
+  { id: 'about', label:'About', ref: aboutRef },
+  { id: 'skill', label:'Skills', ref: skillRef },
+  { id: 'projects', label:'Projects', ref: projectRef },
+  { id: 'contact', label:'Contact', ref: contactRef },
+]), []);
 
 useEffect(() => {
   const handleScroll = () => {
@@ -65,7 +67,7 @@ useEffect(() => {
   handleScroll();
   window.addEventListener('scroll', handleScroll);
   return () => window.removeEventListener('scroll', handleScroll);
-}, []);
+}, [navSections]);
 // ScrollY Active Section End
 
 
