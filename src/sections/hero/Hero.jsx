@@ -41,7 +41,7 @@ const Hero = ({ projectRef }) => {
                     </Stack>
                     <Stack sx={style.heroStack}>
                         <Box component="img" src='/images/gear.svg' sx={style.heroImg} />
-                        <img src="/images/man-cv.png" style={{ width: '100%' }} />
+                        <img src="/images/man-cv.png" style={{ width: '100%' }}  alt='profile contact veljko'/>
                     </Stack>
                 </Container>
             </Box>

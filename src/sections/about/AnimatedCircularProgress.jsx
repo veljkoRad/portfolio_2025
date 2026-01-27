@@ -21,7 +21,7 @@ const AnimatedCircularProgress = ({ value, label, description }) => {
                 setProgress(Math.round(latest));
             }
         });
-    }, [isInView, value]);
+    }, [isInView, value, controls]);
 
     return (
         <Stack
