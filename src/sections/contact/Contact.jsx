@@ -69,6 +69,7 @@ const Contact = ({ contactRef }) => {
           <Box
             component="img"
             src="images/profile_veljko.jpeg"
+            alt="Portrait of Veljko Radivojević"
             sx={style.contactContainer}
           />
           <Box>

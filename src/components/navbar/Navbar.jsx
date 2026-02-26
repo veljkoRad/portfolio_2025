@@ -23,7 +23,7 @@ const Navbar = ({ toggleMode, mode, active, sections }) => {
                             onClick={() => scrollTop()}
                             sx={{ width: '100%', cursor: 'pointer', }}  >
                             <Typography color='text.white' variant='body1' sx={style.navName}>
-                                Veljko <br /> Radivojević
+                                Veljko <br/> Radivojević
                             </Typography>
                         </Stack>
 
@@ -78,7 +78,7 @@ const Navbar = ({ toggleMode, mode, active, sections }) => {
                             sx={{ width: '100%', cursor: 'pointer', }}  >
                             <Typography color='text.blue' variant='body1'
                                 sx={style.navNameMobile}>
-                                Veljko <br />Radivojević
+                                Veljko <br/>Radivojević
                             </Typography>
                         </Stack>
                         <IconButton
