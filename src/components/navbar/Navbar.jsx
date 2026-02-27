@@ -45,7 +45,7 @@ const Navbar = ({ toggleMode, mode, active, sections }) => {
                                 })}
                             </List>
                             {/* Light/Dark Button */}
-                            <IconButton onClick={toggleMode} disableFocusRipple disableRipple sx={style.navIcon}  >
+                            <IconButton onClick={toggleMode} disableFocusRipple disableRipple sx={style.navIcon} aria-label="Toggle light and dark mode"  >
                                 {mode === "light" ? <DarkModeIcon sx={{ color: '#fff' }} /> : <LightModeIcon sx={{ color: '#ffc107' }} />}
                             </IconButton>
 
@@ -53,7 +53,7 @@ const Navbar = ({ toggleMode, mode, active, sections }) => {
                             <IconButton onClick={toggleMobileMenu} sx={{
                                 display: { md: 'none' },
                                 borderRadius: '0px',
-                            }}>
+                            }} aria-label="Open mobile menu" >
                                 <MenuIcon sx={{ color: '#fff', fontSize: '30px' }} />
                             </IconButton>
                         </Stack>
@@ -84,7 +84,8 @@ const Navbar = ({ toggleMode, mode, active, sections }) => {
                         <IconButton
                             onClick={() => setToggleMobile(false)}
                             size='large'
-                            sx={style.navCloseIcon}>
+                            sx={style.navCloseIcon}
+                            aria-label="Close navigation menu">
                             <CloseIcon fontSize='inherit' />
                         </IconButton>
                     </Stack>

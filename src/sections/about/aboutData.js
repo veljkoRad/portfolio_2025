@@ -10,11 +10,11 @@ export const aboutTabContent = [
         title: 'about', content: (
             <>
                 <strong>Full name:</strong> Veljko Radivojevic<br />
-                <strong>Age:</strong> 33 Years < br />
-                <strong>Language:</strong> Serbian, English < br />
-                <strong>Phone:</strong> + 381 60 4480 446 < br />
-                <strong>Email:</strong> radivojevicveljko@gmail.com < br />
-                <strong>Adress:</strong> Belgrade, Serbia < br />
+                <strong>Age:</strong> 33 Years <br />
+                <strong>Language:</strong> Serbian, English <br />
+                <strong>Phone:</strong> + 381 60 4480 446 <br />
+                <strong>Email:</strong> radivojevicveljko@gmail.com <br />
+                <strong>Address:</strong> Belgrade, Serbia <br />
             </>
         )
     },
@@ -31,7 +31,7 @@ export const aboutTabContent = [
     {
         title: 'education', content: (
             <>
-                <strong>BSc in Mechanical Eengineering</strong>  - University of Belgrade <br />
+                <strong>BSc in Mechanical Engineering</strong>  - University of Belgrade <br />
                 2018 <br /><br />
                 <strong>Technical High School – Computer-Controlled CNC Machines</strong> -  Belgrade <br />
                 2011

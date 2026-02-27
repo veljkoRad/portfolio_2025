@@ -13,6 +13,7 @@ const ProjectCard = ({ cardData }) => {
   const firstCard = (cardsPerPage * page) - cardsPerPage
   const lastCard = cardsPerPage * page
   const filterCard = cardData.slice(firstCard, lastCard);
+  const totalPage = Math.ceil(cardData.length /cardsPerPage);
   // Pagination End
 
   return (
@@ -68,7 +69,7 @@ const ProjectCard = ({ cardData }) => {
 
       </Stack >
       {/* I must put ? after cardData because cardData is props, and props(or api) in initial render is 0 */}
-      {cardData?.length >= 4 && <Pagination  count={2} page={page} onChange={pageChange} sx={{ marginTop: '20px' }} color='text' shape='rounded'  />}
+      {cardData?.length >= cardsPerPage && <Pagination  count={totalPage} page={page} onChange={pageChange} sx={{ marginTop: '20px' }} color='text' shape='rounded'  />}
 
     </>
 

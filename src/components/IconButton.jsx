@@ -1,11 +1,12 @@
 import { Box } from "@mui/material"
 
 
-const IconButton = ({ children, href }) => (
+const IconButton = ({ children, href, ariaLabel }) => (
   <Box
     component='a'
     target='_blank'
     href={href}
+    aria-label={ariaLabel}
     sx={{
       cursor: 'pointer',
       border: '3px solid #8f8f92',

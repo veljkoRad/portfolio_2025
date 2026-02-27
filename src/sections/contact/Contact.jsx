@@ -14,7 +14,7 @@ const MotionStack = motion(Stack);
 
 const Contact = ({ contactRef }) => {
   const contactInView = useInView(contactRef, {
-    once: "true",
+    once: true,
     margin: "-300px",
   });
 
