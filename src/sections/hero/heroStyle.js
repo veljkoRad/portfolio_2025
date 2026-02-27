@@ -1,4 +1,6 @@
-export const heroBg= { backgroundImage: "url('/images/crissxcross.png')", height: '93vh', display: 'flex', position: 'relative' }
+export const heroBg = (theme) =>( { backgroundImage:    theme.palette.mode === 'light'
+    ? "linear-gradient(rgba(255,255,255,0.65), rgba(255,255,255,0.65)), url('/images/crissxcross.png')"
+    : "url('/images/crissxcross.png')", height: '93vh', display: 'flex', position: 'relative' })
 
 export const buttonWork ={ border: '1px solid #3b82f6', width: '145px', color: (theme) => theme.palette.text.primary,textTransform:'none' }
 

@@ -1,15 +1,13 @@
-import React, { useEffect, useState, useMemo } from 'react';
-import ReactDOM from 'react-dom/client';
-import App from './App';
+import React, { useEffect, useState, useMemo } from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
 import "./index.css";
-import { CssBaseline, ThemeProvider, createTheme } from '@mui/material';
-
+import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 // To DO:
 // 1. Conect it with github
 // 2. Add it on Netlify and conect with Netlify form
 // 3. Add my images
-
 
 function Root() {
   const [mode, setMode] = useState(localStorage.getItem("themeMode") || "dark");
@@ -18,7 +16,8 @@ function Root() {
     localStorage.setItem("themeMode", mode);
   }, [mode]);
 
-  const toggleMode = () => setMode((prev) => (prev === "dark" ? "light" : "dark"));
+  const toggleMode = () =>
+    setMode((prev) => (prev === "dark" ? "light" : "dark"));
 
   const theme = useMemo(
     () =>
@@ -27,44 +26,43 @@ function Root() {
           mode,
           ...(mode === "light"
             ? {
-              primary: {
-                main: "#e0f2ff",
-                navbar: "#3b82f6"
-
-              },
-              secondary: {
-                main: "#e0f2ff",
-              },
-              background: { default: "#fff" },
-              text: {
-                primary: "#1f1f24",
-                secondary: "#565662",
-                white: '#fff',
-                black: '#1f1f24',
-                blue: "#3b82f6",
-                navigation: "#7ab7fc",
-                loader: "#3b82f6"
-              },
-            }
+                primary: {
+                  main: "#e0f2ff",
+                  navbar: "#3b82f6",
+                },
+                secondary: {
+                  main: "#e0f2ff",
+                },
+                background: { default: "#fff" },
+                text: {
+                  primary: "#1f1f24",
+                  secondary: "#565662",
+                  white: "#fff",
+                  black: "#1f1f24",
+                  blue: "#3b82f6",
+                  navigation: "#7ab7fc",
+                  loader: "#3b82f6",
+                },
+              }
             : {
-              primary: {
-                main: "#272730",
-                navbar: "#272730"
-              },
-              secondary: {
-                main: "#e0f2ff",
-              },
-              background: { default: "#1f1f24" },
-              text: {
-                primary: "#fff",
-                secondary: "#b7bcbe",
-                white: '#fff',
-                black: '#1f1f24',
-                blue: "#3b82f6",
-                navigation: "#4f4f56",
-                loader: "#000"
-              },
-            }),
+                primary: {
+                  main: "#272730",
+                  navbar: "#272730",
+                },
+                secondary: {
+                  main: "#e0f2ff",
+                },
+                background: { default: "#1f1f24" },
+                text: {
+                  primary: "#fff",
+                  secondary: "#b7bcbe",
+                  white: "#fff",
+                  black: "#1f1f24",
+                  blue: "#3b82f6",
+                  navigation: "#4f4f56",
+                  loader: "#000",
+                },
+              }),
         },
 
         typography: {
@@ -73,7 +71,7 @@ function Root() {
             fontSize: "72px",
             fontWeight: 700,
             "@media (max-width:767px)": { fontSize: "64px" },
-            "@media (max-width:400px)": { fontSize: "50px" }
+            "@media (max-width:400px)": { fontSize: "50px" },
           },
           h2: {
             fontSize: "42px",
@@ -131,19 +129,19 @@ function Root() {
               root: ({ theme }) => ({
                 textDecoration: "none",
                 color: theme.palette.text.white,
-                borderRadius: '15px',
-                width: '190px',
-                height: '60px'
+                borderRadius: "15px",
+                width: "190px",
+                height: "60px",
               }),
             },
           },
           MuiButtonBase: {
             styleOverrides: {
               root: ({ theme }) => ({
-                '&.Mui-selected': {
+                "&.Mui-selected": {
                   color: theme.palette.text.blue + "!important",
-                }
-              })
+                },
+              }),
             },
           },
           MuiListItemButton: {
@@ -151,35 +149,37 @@ function Root() {
               root: () => ({
                 color: theme.palette.text.navigation,
                 "&:hover": {
-                  backgroundColor: 'unset'
+                  backgroundColor: "unset",
                 },
                 "&.Mui-selected": {
                   color: "#fff !important",
                   background: "none",
                 },
               }),
-            }
+            },
           },
           MuiTabs: {
             styleOverrides: {
               indicator: ({ theme }) => ({
-                height: '2px',
+                height: "2px",
                 backgroundColor: theme.palette.text.blue,
-                borderRadius: '2px',
+                borderRadius: "2px",
               }),
             },
           },
           MuiTextField: {
             styleOverrides: {
               root: ({ theme }) => ({
-                '& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                  borderColor: theme.palette.text.blue,
-                },
-                '& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline': {
-                  borderColor: theme.palette.text.blue
-                }
-              })
-            }
+                "& .MuiOutlinedInput-root.Mui-focused .MuiOutlinedInput-notchedOutline":
+                  {
+                    borderColor: theme.palette.text.blue,
+                  },
+                "& .MuiOutlinedInput-root:hover .MuiOutlinedInput-notchedOutline":
+                  {
+                    borderColor: theme.palette.text.blue,
+                  },
+              }),
+            },
           },
           MuiToolbar: {
             styleOverrides: {
@@ -194,7 +194,7 @@ function Root() {
           MuiTypography: {
             styleOverrides: {
               root: {
-                textTransform: 'none'
+                textTransform: "none",
               },
             },
           },
@@ -208,7 +208,7 @@ function Root() {
           },
         },
       }),
-    [mode]
+    [mode],
   );
 
   return (
@@ -219,9 +219,9 @@ function Root() {
   );
 }
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Root />
-  </React.StrictMode>
+  </React.StrictMode>,
 );
