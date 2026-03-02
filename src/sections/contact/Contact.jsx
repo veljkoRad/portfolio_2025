@@ -56,7 +56,7 @@ const Contact = ({ contactRef }) => {
   };
 
   return (
-    <Box>
+    <Box sx={{ backgroundColor: (theme) => theme.palette.primary.main }}>
       <Container fixed sx={{ paddingY: "120px" }}>
         <MotionStack
           initial={{ opacity: 0, y: 30 }}

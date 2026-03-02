@@ -6,6 +6,7 @@ import Hero from './sections/hero/Hero'
 import About from "./sections/about/About";
 import Skill from "./sections/skill/Skill";
 import Projects from "./sections/projects/Projects";
+import Tools from "./sections/tools/Tools";
 import Contact from "./sections/contact/Contact";
 import Footer from "./components/footer/Footer";
 
@@ -43,6 +44,7 @@ const startCurtain = useCallback(() => {
   const aboutRef = useRef(null);
   const skillRef = useRef(null);
   const projectRef = useRef(null);
+  const toolsRef = useRef(null);
   const contactRef = useRef(null);
 
 const navSections = useMemo(() => ([
@@ -50,6 +52,7 @@ const navSections = useMemo(() => ([
   { id: 'about', label:'About', ref: aboutRef },
   { id: 'skill', label:'Skills', ref: skillRef },
   { id: 'projects', label:'Projects', ref: projectRef },
+  { id: 'tools', label:'Tools', ref: toolsRef },
   { id: 'contact', label:'Contact', ref: contactRef },
 ]), []);
 
@@ -111,6 +114,7 @@ useEffect(() => {
         <div ref={aboutRef} id='about'><About /></div>
         <div ref={skillRef} id='skill'><Skill /></div>
         <div ref={projectRef} id='projects'><Projects /></div>
+        <div ref={toolsRef} id='tools'><Tools /></div>
         <div ref={contactRef} id='contact'><Contact contactRef={contactRef} /></div>
         <Footer />
       </Box>
