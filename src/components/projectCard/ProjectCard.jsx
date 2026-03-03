@@ -50,7 +50,7 @@ const ProjectCard = ({ cardData }) => {
               <Box
                 component="img"
                 src={`images/${item.image}`}
-                sx={{ width: { xs: "285px", md: "402px" } }}
+                sx={{ width: { xs: "285px", s: "100%" } }}
                 alt={item.name}
               />
               <Stack

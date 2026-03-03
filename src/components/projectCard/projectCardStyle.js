@@ -8,7 +8,7 @@ export const hoverBox = {
   alignItems: "center",
   transition: "all 0.3s ease 0s",
   color: (theme) => theme.palette.text.primary,
-  p: { xs: "24px 12px", md: "24px" },
+  p: { xs: "24px 12px", s: "24px 24px" },
   background: (theme) => theme.palette.background.default,
   borderRadius: "16px",
   cursor: "pointer",
