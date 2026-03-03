@@ -79,7 +79,7 @@ const About = () => {
               {aboutTabs.map((item) => (
                 <Tab
                   sx={{
-                    fontSize: "18px",
+                    fontSize: { xs: "14px", s: "18px" },
                     textTransform: "none",
                     marginTop: "20px",
                   }}

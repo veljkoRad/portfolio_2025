@@ -88,7 +88,7 @@ function Root() {
           h4: {
             fontSize: "35px",
             fontWeight: 600,
-            "@media (max-width:991px)": { fontSize: "23px" },
+            "@media (max-width:991px)": { fontSize: "22px" },
           },
           body1: {
             fontSize: "16px",

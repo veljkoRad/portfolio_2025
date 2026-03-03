@@ -50,7 +50,7 @@ const ProjectCard = ({ cardData }) => {
               <Box
                 component="img"
                 src={`images/${item.image}`}
-                sx={{ width: { xs: "285px", s: "100%" } }}
+                sx={{ width: { xs: "265px", s: "100%" } }}
                 alt={item.name}
               />
               <Stack
@@ -58,7 +58,7 @@ const ProjectCard = ({ cardData }) => {
                 flexDirection="row"
                 alignItems="center"
                 justifyContent="space-between"
-                gap="30px"
+                gap="20px"
               >
                 <Stack>
                   <Typography className="projectTitleHover" variant="h4">
