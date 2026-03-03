@@ -1,12 +1,13 @@
 * {
-  transition: background-color 0.5s ease, color 0.5s ease;
+  transition:
+    background-color 0.5s ease,
+    color 0.5s ease;
 }
 
 .CircularProgressbar .CircularProgressbar-text {
-    font-weight: 700;
+  font-weight: 700;
 }
 
-
 .CircularProgressbar .CircularProgressbar-trail {
-    opacity: 0.2;
+  opacity: 0.2;
 }

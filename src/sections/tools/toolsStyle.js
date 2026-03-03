@@ -11,6 +11,7 @@ export const badge = (theme) => ({
   border: `1px solid rgba(59, 130, 246, 0.3)`,
   "&:hover": {
     borderColor: theme.palette.primary.main,
+    background: "#565662",
   },
 });
 
@@ -39,11 +40,4 @@ export const cloudTooltip = (theme) => ({
   whiteSpace: "nowrap",
   fontWeight: 600,
   fontSize: "14px",
-  "&::after": {
-    content: '""',
-    position: "absolute",
-    top: "100%",
-    left: "50%",
-    transform: "translateX(-50%)",
-  },
 });
