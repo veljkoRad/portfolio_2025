@@ -27,11 +27,11 @@ export const heroStack = {
 
 export const heroImg = {
   color: "#3b82f6",
-  width: "63%",
+  width: "83%",
   position: "absolute",
   zIndex: "-1",
-  top: "13%",
-  left: "-7%",
+  top: "12%",
+  left: "-14%",
   animation: "spin 28s linear infinite",
   "@keyframes spin": {
     from: { transform: "rotate(0deg)" },
