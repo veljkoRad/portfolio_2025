@@ -37,7 +37,10 @@ const Hero = ({ projectRef }) => {
             <Stack
               direction="row"
               gap="15px"
-              sx={{ marginTop: "40px", flexWrap: { xs: "wrap", s: "nowrap" } }}
+              sx={{
+                marginTop: "40px",
+                flexDirection: { xs: "column", sm: "row" },
+              }}
             >
               <Button
                 component="a"
