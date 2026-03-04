@@ -8,7 +8,7 @@ const MotionStack = motion(Stack);
 
 const Skill = () => {
   const skillRef = useRef(null);
-  const skillInView = useInView(skillRef, { once: true, margin: "-300px" });
+  const skillInView = useInView(skillRef, { once: true, margin: "-100px" });
 
   return (
     <Box sx={{ paddingY: "120px" }}>
