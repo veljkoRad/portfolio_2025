@@ -1,5 +1,6 @@
 import { motion, useInView } from "framer-motion";
 import { useForm, Controller } from "react-hook-form";
+import emailjs from "@emailjs/browser";
 import {
   Box,
   Button,
@@ -33,25 +34,17 @@ const Contact = ({ contactRef }) => {
     mode: "onBlur", // validate when user leaves the field
   });
 
-  //  I'm choosing what to do with onSubmit(data). Encode and onSubmit are for Netlify form
-  const encode = (data) =>
-    Object.keys(data)
-      .map((k) => encodeURIComponent(k) + "=" + encodeURIComponent(data[k]))
-      .join("&");
-
   const onSubmit = async (data) => {
     try {
-      await fetch("/", {
-        method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: encode({ "form-name": "contact", ...data }),
-      });
-
+      await emailjs.send(
+        "service_5a32n4i",
+        "template_j9v9fgt",
+        data,
+        "k7IvxzUAmv8LxH_JK",
+      );
       reset();
-      // show success UI if you want
     } catch (e) {
       console.error(e);
-      // show error UI if you want
     }
   };
 
@@ -85,12 +78,7 @@ const Contact = ({ contactRef }) => {
               sx={style.form}
               onSubmit={handleSubmit(onSubmit)}
               noValidate
-              name="contact"
-              data-netlify="true"
-              data-netlify-honeypot="bot-field"
             >
-              <input type="hidden" name="form-name" value="contact" />
-              <input type="hidden" name="bot-field" />
               {/* Name */}
               <Controller
                 name="name"
