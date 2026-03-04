@@ -54,7 +54,11 @@ const Projects = () => {
               <Tab key={item.label} label={item.label} />
             ))}
           </Tabs>
-          {tabs[value].component}
+          {tabs.map((tab, index) => (
+            <Box key={tab.label} sx={{ display: index === value ? "block" : "none" }}>
+              {tab.component}
+            </Box>
+          ))}
         </ProjectMotionStack>
       </Container>
     </Box>
