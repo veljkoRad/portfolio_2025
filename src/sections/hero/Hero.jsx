@@ -71,7 +71,7 @@ const Hero = ({ projectRef }) => {
           <Stack sx={style.heroStack}>
             <Box component="img" src="/images/gear.svg" sx={style.heroImg} />
             <img
-              src="/images/man-cv.png"
+              src="/images/profile2.png"
               style={{ width: "100%" }}
               alt="profile contact veljko"
             />

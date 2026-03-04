@@ -30,8 +30,8 @@ export const heroImg = {
   width: "63%",
   position: "absolute",
   zIndex: "-1",
-  top: "24%",
-  left: "-6%",
+  top: "13%",
+  left: "-12%",
   animation: "spin 28s linear infinite",
   "@keyframes spin": {
     from: { transform: "rotate(0deg)" },

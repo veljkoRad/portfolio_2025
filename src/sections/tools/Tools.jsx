@@ -22,7 +22,7 @@ const Tools = () => {
     <Box sx={{ paddingY: "120px" }}>
       <Container fixed>
         <Typography variant="h3" color="text.blue" textAlign="center">
-          Tech Stack
+          Tools
         </Typography>
         <MotionStack
           ref={toolsRef}

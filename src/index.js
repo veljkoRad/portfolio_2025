@@ -4,14 +4,6 @@ import App from "./App";
 import "./index.css";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
-// To DO:
-// PORTFOLIO
-// 1.	In Iphone some section are not visible
-// 2.	My image in hero
-// 3.	Check again with ai is everything good
-// 4.	Check cv.pdf
-// 5.	Update LinkedIN
-
 function Root() {
   const [mode, setMode] = useState(localStorage.getItem("themeMode") || "dark");
 
