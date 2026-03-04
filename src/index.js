@@ -22,7 +22,7 @@ function Root() {
           ...(mode === "light"
             ? {
                 primary: {
-                  main: "#e0f2ff",
+                  main: "#d8d8d8",
                   navbar: "#3b82f6",
                 },
                 secondary: {
