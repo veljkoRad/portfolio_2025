@@ -6,17 +6,12 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 // To DO:
 // PORTFOLIO
-// 1.	Hero padding for mobile too big
-// 2.	Make gero image on mobile
-// 3.	Animation on load for tech stack is not good
-// 4.	When changing card tabs in projec5 ,image does t show for one second in Netlify
-// 5.	Loading circle at begining is not centered in mobile
-// 6.	Gap between Tech Stack in mobile bigger
-// 7.	Form is not working still
-// 8.	My image in hero
-// 9.	Check again woth ai is everything good
-// 10.	Check cv.pdf
-// 11.	Update LinkedIN
+// 1.	In Iphone some section are not visible
+// 2.	Form is not working still
+// 3.	My image in hero
+// 4.	Check again with ai is everything good
+// 5.	Check cv.pdf
+// 6.	Update LinkedIN
 
 function Root() {
   const [mode, setMode] = useState(localStorage.getItem("themeMode") || "dark");
