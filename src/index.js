@@ -5,9 +5,18 @@ import "./index.css";
 import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 
 // To DO:
-// 1. Conect it with github
-// 2. Add it on Netlify and conect with Netlify form
-// 3. Add my images
+// PORTFOLIO
+// 1.	Hero padding for mobile too big
+// 2.	Make gero image on mobile
+// 3.	Animation on load for tech stack is not good
+// 4.	When changing card tabs in projec5 ,image does t show for one second in Netlify
+// 5.	Loading circle at begining is not centered in mobile
+// 6.	Gap between Tech Stack in mobile bigger
+// 7.	Form is not working still
+// 8.	My image in hero
+// 9.	Check again woth ai is everything good
+// 10.	Check cv.pdf
+// 11.	Update LinkedIN
 
 function Root() {
   const [mode, setMode] = useState(localStorage.getItem("themeMode") || "dark");

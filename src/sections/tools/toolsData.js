@@ -5,7 +5,7 @@ export const techStack = [
   { name: "React", icon: "images/stackIcons/react.svg" },
   { name: "WordPress", icon: "images/stackIcons/wordpress.png" },
   { name: "Astro", icon: "images/stackIcons/astro.svg" },
-  { name: "GitHub", icon: "images/stackIcons/github.svg" },
+  { name: "GitHub", icon: "images/stackIcons/github.png" },
   { name: "TypeScript", icon: "images/stackIcons/typescript.png" },
   { name: "Material UI", icon: "images/stackIcons/material-ui.png" },
   { name: "Bootstrap", icon: "images/stackIcons/bootstrap.svg" },
