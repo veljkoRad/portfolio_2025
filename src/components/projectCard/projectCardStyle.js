@@ -12,7 +12,10 @@ export const hoverBox = {
   background: (theme) => theme.palette.background.default,
   borderRadius: "16px",
   cursor: "pointer",
-  "&:hover": { background: "#fff", border: "1px solid #3b82f6" },
+  "&:hover": {
+    background: "#fff",
+    border: (theme) => `1px solid ${theme.palette.text.secondary}`,
+  },
   "&:hover .projectTitleHover": { color: (theme) => theme.palette.text.blue },
   "&:hover .projectIconContainer": {
     transform: "rotate(45deg)",
