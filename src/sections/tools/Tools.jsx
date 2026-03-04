@@ -32,7 +32,11 @@ const Tools = () => {
             hidden: { opacity: 0, y: 30 },
             visible: { opacity: 1, y: 0 },
           }}
-          sx={{ marginTop: "64px", flexDirection: { xs: "column", md: "row" } }}
+          sx={{
+            marginTop: "64px",
+            flexDirection: { xs: "column", md: "row" },
+            gap: { xs: "40px", md: "0" },
+          }}
         >
           {/* Left Div Start */}
           <Stack
