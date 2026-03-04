@@ -16,7 +16,7 @@ const MotionStack = motion(Stack);
 
 const Tools = () => {
   const toolsRef = useRef(null);
-  const toolsInView = useInView(toolsRef, { once: true, margin: "-300px" });
+  const toolsInView = useInView(toolsRef, { once: true, margin: "-100px" });
 
   return (
     <Box sx={{ paddingY: "120px" }}>

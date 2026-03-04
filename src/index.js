@@ -7,11 +7,10 @@ import { CssBaseline, ThemeProvider, createTheme } from "@mui/material";
 // To DO:
 // PORTFOLIO
 // 1.	In Iphone some section are not visible
-// 2.	Form is not working still
-// 3.	My image in hero
-// 4.	Check again with ai is everything good
-// 5.	Check cv.pdf
-// 6.	Update LinkedIN
+// 2.	My image in hero
+// 3.	Check again with ai is everything good
+// 4.	Check cv.pdf
+// 5.	Update LinkedIN
 
 function Root() {
   const [mode, setMode] = useState(localStorage.getItem("themeMode") || "dark");
