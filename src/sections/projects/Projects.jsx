@@ -3,7 +3,7 @@ import { useState, useRef } from "react";
 import ReactTab from "./tabs/ReactTab";
 import LandingPageTab from "./tabs/LandingPageTab";
 import EmailTab from "./tabs/EmailTab";
-import { motion, useInView } from "framer-motion";
+import { AnimatePresence, motion, useInView } from "framer-motion";
 import * as style from "./projectsStyle";
 
 const ProjectMotionStack = motion(Stack);
@@ -54,11 +54,24 @@ const Projects = () => {
               <Tab key={item.label} label={item.label} />
             ))}
           </Tabs>
-          {tabs.map((tab, index) => (
-            <Box key={tab.label} sx={{ display: index === value ? "block" : "none" }}>
-              {tab.component}
-            </Box>
-          ))}
+          {/* Preload all tabs so images stay cached */}
+          <Box sx={{ display: "none" }}>
+            {tabs.map((tab) => (
+              <Box key={`preload-${tab.label}`}>{tab.component}</Box>
+            ))}
+          </Box>
+          {/* Animated active tab */}
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={value}
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -20 }}
+              transition={{ duration: 0.3, ease: "easeOut" }}
+            >
+              {tabs[value].component}
+            </motion.div>
+          </AnimatePresence>
         </ProjectMotionStack>
       </Container>
     </Box>
