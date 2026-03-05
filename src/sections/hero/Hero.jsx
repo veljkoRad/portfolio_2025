@@ -44,7 +44,7 @@ const Hero = ({ projectRef }) => {
             >
               <Button
                 component="a"
-                href="/cv.pdf"
+                href="/cv_2026.pdf"
                 download
                 variant="contained"
                 sx={{
