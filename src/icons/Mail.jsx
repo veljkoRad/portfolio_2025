@@ -1,5 +1,3 @@
-import { px } from "framer-motion";
-
 const Mail = () => (
   <svg
     height="25px"
