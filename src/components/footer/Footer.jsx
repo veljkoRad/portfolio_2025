@@ -1,33 +1,70 @@
-import { Box, Container, Stack, Typography } from '@mui/material'
-import IconButton from '../../components/IconButton'
-import LinkedIn from '../../icons/LinkedIn'
-import Facebook from '../../icons/Facebook'
-import Instagram from '../../icons/Instagram'
-import Github from '../../icons/Github'
-import * as style from './footerStyle'
+import { Box, Container, Stack, Typography } from "@mui/material";
+import IconButton from "../../components/IconButton";
+import LinkedIn from "../../icons/LinkedIn";
+import Facebook from "../../icons/Facebook";
+import Instagram from "../../icons/Instagram";
+import Github from "../../icons/Github";
+import Mail from "../../icons/Mail";
+import * as style from "./footerStyle";
 
 const Footer = () => {
   return (
-    <Box sx={style.footerBg} >
-      <Container fixed sx={{ paddingY: '80px' }}>
+    <Box sx={style.footerBg}>
+      <Container fixed sx={{ paddingY: "80px" }}>
         <Stack
-          flexDirection='row'
-          alignItems='center'
-          justifyContent='space-between'
-          flexWrap='wrap'
-          gap='30px' >
-          <Typography sx={style.nameText}>Veljko <br /> Radivojević</Typography>
-          <Stack sx={{ flex: 1 }} flexDirection='row' justifyContent='center' gap='10px'>
-            <IconButton href="https://www.linkedin.com/in/veljko-radivojevic-77a825267" ariaLabel="LinkedIn profile" ><LinkedIn /></IconButton>
-            <IconButton href="https://github.com/veljkoRad" ariaLabel="Github profile"  ><Github /></IconButton>
-            <IconButton href="https://www.facebook.com/veljko.radivojevic.1" ariaLabel="Facebook profile"  ><Facebook /></IconButton>
-            <IconButton href="https://www.instagram.com/rveljko92/" ariaLabel="Instagram profile"  ><Instagram /></IconButton>
+          flexDirection="row"
+          alignItems="center"
+          justifyContent="space-between"
+          flexWrap="wrap"
+          gap="30px"
+        >
+          <Typography sx={style.nameText}>
+            Veljko <br /> Radivojević
+          </Typography>
+          <Stack
+            sx={{ flex: 1 }}
+            flexDirection="row"
+            justifyContent="center"
+            gap="10px"
+          >
+            <IconButton
+              href="https://www.linkedin.com/in/veljko-radivojevic-77a825267"
+              ariaLabel="LinkedIn profile"
+            >
+              <LinkedIn />
+            </IconButton>
+            <IconButton
+              href="https://github.com/veljkoRad"
+              ariaLabel="Github profile"
+            >
+              <Github />
+            </IconButton>
+            <IconButton
+              href="mailto:radivojevicveljko92@gmail.com"
+              ariaLabel="My Mail"
+            >
+              <Mail />
+            </IconButton>
+            <IconButton
+              href="https://www.facebook.com/veljko.radivojevic.1"
+              ariaLabel="Facebook profile"
+            >
+              <Facebook />
+            </IconButton>
+            <IconButton
+              href="https://www.instagram.com/rveljko92/"
+              ariaLabel="Instagram profile"
+            >
+              <Instagram />
+            </IconButton>
           </Stack>
-          <Typography sx={style.copyright} color='text.secondary'>Copyright © 2025 Veljko Radivojević. <br />  All Rights Reserved.</Typography>
+          <Typography sx={style.copyright} color="text.secondary">
+            Copyright © 2025 Veljko Radivojević. <br /> All Rights Reserved.
+          </Typography>
         </Stack>
       </Container>
-    </Box >
-  )
-}
+    </Box>
+  );
+};
 
-export default Footer
+export default Footer;
